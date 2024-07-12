@@ -1,214 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV của bạn</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f0f0f0;
-            padding: 20px;
-            margin: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Template</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .profile-pic {
+      width: 100%;
+      border-radius: 50%;
+    }
 
-        .cv {
-            background-color: #fff;
-            padding: 20px;
-            margin: 20px auto;
-            width: 100%;
-            max-width: 800px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+    .progress-circles {
+      display: flex;
+      justify-content: space-between;
+    }
 
-        .header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
+    .progress-circle {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #e0e0e0;
+      margin-right: 3px;
+    }
 
-        .header-info {
-            flex-grow: 1;
-        }
-
-        .header-info h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            color: #283b63;
-        }
-
-        .header-info p {
-            margin: 0;
-            color: #555;
-        }
-
-        .header-right {
-            margin-left: 20px;
-        }
-
-        .header-right img {
-            width: 100px;
-            height: auto;
-            border-radius: 50%;
-        }
-
-        .section {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .column {
-            width: 48%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .column.wide {
-            width: 100%;
-        }
-
-        .column.half {
-            width: 50%;
-        }
-
-        .column.full {
-            width: 100%;
-        }
-
-        .column h2 {
-            color: #283b63;
-        }
-
-        .skills {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .skill {
-            width: 48%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        .skill h3 {
-            color: #283b63;
-            margin-top: 0;
-        }
-
-        .progress-bar {
-            width: 100%;
-            height: 20px;
-            background-color: #ddd;
-            border-radius: 10px;
-            margin-bottom: 8px;
-        }
-
-        .progress-bar-fill {
-            height: 100%;
-            border-radius: 10px;
-            background-color: #283b63;
-            width: 0;
-            transition: width 0.6s ease;
-        }
-
-        .progress-label {
-            margin-top: 4px;
-            text-align: right;
-        }
-
-        @media (max-width: 600px) {
-            .cv {
-                padding: 10px;
-            }
-
-            .column, .skill {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .header {
-                flex-direction: column;
-                align-items: flex-start;
-                text-align: center;
-            }
-
-            .header-right {
-                margin-left: 0;
-                margin-top: 10px;
-                text-align: center;
-            }
-        }
-    </style>
+    .progress-circle.active {
+      background-color: #3b82f6;
+    }
+  </style>
 </head>
 <body>
-    <div class="cv">
-        <div class="header">
-            <div class="header-info">
-                <h1>Họ và tên của bạn</h1>
-                <p>Thông tin cơ bản khác</p>
-            </div>
-            <div class="header-right">
-                <img src="avatar.jpg" alt="Ảnh đại diện">
-            </div>
-        </div>
-        <div class="section">
-            <div class="column wide">
-                <h2>Mục tiêu nghề nghiệp</h2>
-                <p>Mô tả mục tiêu nghề nghiệp của bạn</p>
-            </div>
-        </div>
-        <div class="section">
-            <div class="column wide">
-                <h2>Học vấn</h2>
-                <p>Thông tin về trình độ học vấn của bạn</p>
-                <p>Thời gian: Tháng 1/2000 - Tháng 12/2004</p>
-            </div>
-            <div class="column wide">
-                <h2>Kinh nghiệm làm việc</h2>
-                <p>Thông tin về kinh nghiệm làm việc của bạn</p>
-                <p>Thời gian: Tháng 1/2005 - Hiện tại</p>
-            </div>
-        </div>
-        <div class="section">
-            <div class="column half">
-                <h2>Tiếng Anh</h2>
-                <div class="skill">
-                    <h3>Nghe</h3>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 80%;"></div>
-                    </div>
-                    <p class="progress-label">80%</p>
-                </div>
-                <div class="skill">
-                    <h3>Nói</h3>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 70%;"></div>
-                    </div>
-                    <p class="progress-label">70%</p>
-                </div>
-                <div class="skill">
-                    <h3>Đọc</h3>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 85%;"></div>
-                    </div>
-                    <p class="progress-label">85%</p>
-                </div>
-                <div class="skill">
-                    <h3>Viết</h3>
-                    <div class="progress-bar">
-                        <div class="progress-bar-fill" style="width: 75%;"></div>
-                    </div>
-                    <p class="progress-label">75%</p>
-                </div>
-            </div>
-            <div class="column half">
-                <h2>Sở thích & Kỹ năng</h2>
-                <p>Mô tả về sở thích của bạn và kỹ năng chính, kỹ năng khác</p>
-            </div>
-        </div>
+  <div class="container mt-4">
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h2>Thông tin cá nhân</h2>
+        <div id="personalInformation"></div>
+      </div>
+      <div class="col-md-6 text-center">
+        <img id="profilePicture" class="profile-pic" src="" alt="Profile Picture">
+      </div>
     </div>
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2>Mục tiêu nghề nghiệp</h2>
+        <div id="careerObjective"></div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h2>Trình độ học vấn</h2>
+        <div id="education"></div>
+      </div>
+      <div class="col-md-6">
+        <h2>Thời gian học tập</h2>
+        <div id="educationTimeline"></div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h2>Kinh nghiệm làm việc</h2>
+        <div id="workExperience"></div>
+      </div>
+      <div class="col-md-6">
+        <h2>Thời gian làm việc</h2>
+        <div id="workTimeline"></div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-12">
+        <h2>Trình độ tiếng Anh</h2>
+        <div id="englishProficiency"></div>
+      </div>
+    </div>
+    <div class="row mb-4">
+      <div class="col-md-6">
+        <h2>Kỹ năng</h2>
+        <div id="skills"></div>
+      </div>
+      <div class="col-md-6">
+        <h2>Sở thích</h2>
+        <div id="hobbies"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const data = {
+      "personalInformation": {
+        "name": "Nguyễn Văn A",
+        "title": "Software Developer",
+        "contact": {
+          "email": "example@gmail.com",
+          "phone": "0123456789",
+          "address": "123 Đường ABC, Quận 1, TP. HCM"
+        },
+        "profilePicture": "https://tse4.mm.bing.net/th?id=OIP.mbBC8hBedpzdtPLaSbw2wQHaE7&pid=Api&P=0&h=220"
+      },
+      "careerObjective": "Phát triển sự nghiệp trong lĩnh vực công nghệ thông tin, chuyên về phát triển phần mềm.",
+      "education": [
+        {
+          "degree": "Cử nhân Công nghệ Thông tin",
+          "school": "Đại học Bách Khoa",
+          "year": "2015-2019"
+        }
+      ],
+      "workExperience": [
+        {
+          "jobTitle": "Lập trình viên",
+          "company": "Công ty ABC",
+          "year": "2019-2022",
+          "description": "Phát triển các ứng dụng web sử dụng JavaScript, HTML và CSS."
+        }
+      ],
+      "englishProficiency": {
+        "listening": 3,
+        "speaking": 4,
+        "reading": 5,
+        "writing": 2
+      },
+      "skills": ["JavaScript", "HTML", "CSS", "React"],
+      "hobbies": ["Reading", "Traveling", "Coding"]
+    };
+
+    document.addEventListener("DOMContentLoaded", function() {
+      // Personal Information
+      const personalInformation = document.getElementById('personalInformation');
+      personalInformation.innerHTML = `
+        <p><strong>Name:</strong> ${data.personalInformation.name}</p>
+        <p><strong>Title:</strong> ${data.personalInformation.title}</p>
+        <p><strong>Email:</strong> ${data.personalInformation.contact.email}</p>
+        <p><strong>Phone:</strong> ${data.personalInformation.contact.phone}</p>
+        <p><strong>Address:</strong> ${data.personalInformation.contact.address}</p>
+      `;
+
+      // Profile Picture
+      const profilePicture = document.getElementById('profilePicture');
+      profilePicture.src = data.personalInformation.profilePicture;
+
+      // Career Objective
+      const careerObjective = document.getElementById('careerObjective');
+      careerObjective.innerHTML = `<p>${data.careerObjective}</p>`;
+
+      // Education
+      const education = document.getElementById('education');
+      let educationHTML = '<ul>';
+      data.education.forEach(edu => {
+        educationHTML += `<li><p><strong>${edu.degree}</strong> - ${edu.school}</p></li>`;
+      });
+      educationHTML += '</ul>';
+      education.innerHTML = educationHTML;
+
+      // Education Timeline
+      const educationTimeline = document.getElementById('educationTimeline');
+      let educationTimelineHTML = '<ul>';
+      data.education.forEach(edu => {
+        educationTimelineHTML += `<li><p>${edu.year}</p></li>`;
+      });
+      educationTimelineHTML += '</ul>';
+      educationTimeline.innerHTML = educationTimelineHTML;
+
+      // Work Experience
+      const workExperience = document.getElementById('workExperience');
+      let workExperienceHTML = '<ul>';
+      data.workExperience.forEach(exp => {
+        workExperienceHTML += `<li><p><strong>${exp.jobTitle}</strong> - ${exp.company}<br>${exp.description}</p></li>`;
+      });
+      workExperienceHTML += '</ul>';
+      workExperience.innerHTML = workExperienceHTML;
+
+      // Work Timeline
+      const workTimeline = document.getElementById('workTimeline');
+      let workTimelineHTML = '<ul>';
+      data.workExperience.forEach(exp => {
+        workTimelineHTML += `<li><p>${exp.year}</p></li>`;
+      });
+      workTimelineHTML += '</ul>';
+      workTimeline.innerHTML = workTimelineHTML;
+
+      // English Proficiency
+      const englishProficiency = document.getElementById('englishProficiency');
+      englishProficiency.innerHTML = `
+        <div class="progress-circles">
+          <span>Listening:</span>
+          ${generateProgressCircles(data.englishProficiency.listening)}
+        </div>
+        <div class="progress-circles">
+          <span>Speaking:</span>
+          ${generateProgressCircles(data.englishProficiency.speaking)}
+        </div>
+        <div class="progress-circles">
+          <span>Reading:</span>
+          ${generateProgressCircles(data.englishProficiency.reading)}
+        </div>
+        <div class="progress-circles">
+          <span>Writing:</span>
+          ${generateProgressCircles(data.englishProficiency.writing)}
+        </div>
+      `;
+
+      // Skills
+      const skills = document.getElementById('skills');
+      let skillsHTML = '<ul>';
+      data.skills.forEach(skill => {
+        skillsHTML += `<li>${skill}</li>`;
+      });
+      skillsHTML += '</ul>';
+      skills.innerHTML = skillsHTML;
+
+      // Hobbies
+      const hobbies = document.getElementById('hobbies');
+      let hobbiesHTML = '<ul>';
+      data.hobbies.forEach(hobby => {
+        hobbiesHTML += `<li>${hobby}</li>`;
+      });
+      hobbiesHTML += '</ul>';
+      hobbies.innerHTML = hobbiesHTML;
+    });
+
+    function generateProgressCircles(level) {
+      let circles = '';
+      for (let i = 1; i <= 5; i++) {
+        circles += `<div class="progress-circle ${i <= level ? 'active' : ''}"></div>`;
+      }
+      return circles;
+    }
+  </script>
 </body>
 </html>
